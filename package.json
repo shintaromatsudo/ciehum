@@ -1,0 +1,28 @@
+{
+  "name": "ciehum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shintaromatsudo/ciehum.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shintaromatsudo/ciehum/issues"
+  },
+  "homepage": "https://github.com/shintaromatsudo/ciehum#readme",
+  "dependencies": {
+    "next": "^8.0.4",
+    "react": "^16.8.6",
+    "react-burger-menu": "^2.6.8",
+    "react-dom": "^16.8.6"
+  }
+}

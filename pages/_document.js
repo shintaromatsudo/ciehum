@@ -1,3 +1,5 @@
+import Document, { Head, Main, NextScript } from 'next/document'
+
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -13,14 +15,8 @@ class MyDocument extends Document {
             content="initial-scale=1.0, width=device-width"
             key="viewport"
           />
-          <meta
-            name="description"
-            content=""
-          />
-          <meta
-            name="keywords"
-            content=""
-          />
+          <meta name="description" content="" />
+          <meta name="keywords" content="" />
           <link
             rel="shortcut icon"
             type="image/x-icon"
@@ -38,14 +34,14 @@ class MyDocument extends Document {
               background-color: white;
               animation:fadeIn 3s;
             }
-      @keyframes fadeIn {
-        0% { 
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
+            @keyframes fadeIn {
+              0% { 
+                opacity: 0;
+              }
+              100% {
+                opacity: 1;
+              }
+            }
           `}</style>
         </head>
         <body>
