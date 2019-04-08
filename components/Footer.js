@@ -10,6 +10,7 @@ const Footer = () => (
       }
       .footer {
         background-color: #a1d8e6;
+        z-index: 9999;
       }
     `}</style>
   </div>

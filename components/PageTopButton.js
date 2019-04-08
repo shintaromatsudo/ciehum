@@ -24,18 +24,6 @@ class PageTopButton extends React.Component {
     }
   }
 
-  hover() {
-    const scrollToTop = document.getElementById('scrollToTop')
-    scrollToTop.classList.add('hover')
-    scrollToTop.classList.remove('leave')
-  }
-
-  leave() {
-    const scrollToTop = document.getElementById('scrollToTop')
-    scrollToTop.classList.add('leave')
-    scrollToTop.classList.remove('hover')
-  }
-
   scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -46,12 +34,7 @@ class PageTopButton extends React.Component {
 
   render() {
     return (
-      <div
-        id="scrollToTop"
-        onClick={this.scrollToTop}
-        onMouseEnter={this.hover}
-        onMouseLeave={this.leave}
-      >
+      <div id="scrollToTop" onClick={this.scrollToTop}>
         <i className="fas fa-angle-double-up" />
         <style jsx>{`
           #scrollToTop {
@@ -61,47 +44,20 @@ class PageTopButton extends React.Component {
             width: 50px;
             height: 50px;
             font-size: 2em;
-            color: #a0d8ef;
-            background-color: white;
-            border: 2px solid #a0d8ef;
+            color: #a1d8e6;
+            background-color: #00afcc;
+            border: 2px solid #a1d8e6;
             border-radius: 50%;
             text-align: center;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.5s linear 0s;
             opacity: 0;
             visibility: hidden;
           }
-          .hover {
-            animation: hover 0.3s linear 0s;
-            animation-fill-mode: forwards;
-          }
-          .leave {
-            animation: leave 0.3s linear 0s;
-            animation-fill-mode: forwards;
-          }
-          @keyframes hover {
-            0% {
-              color: #a0d8ef;
-              background-color: #cab8d9;
-              border: 2px solid #a688bd;
-            }
-            100% {
-              color: white;
-              background-color: #a688bd;
-              border: 2px solid #cab8d9;
-            }
-          }
-          @keyframes leave {
-            0% {
-              color: white;
-              background-color: #a688bd;
-              border: 2px solid #cab8d9;
-            }
-            100% {
-              color: #a0d8ef;
-              background-color: #cab8d9;
-              border: 2px solid #a688bd;
-            }
+          #scrollToTop :hover {
+            color: #00afcc;
+            background-color: #a1d8e6;
+            border: 2px solid #00afcc;
           }
           .fadeIn {
             animation: fadein 0.5s linear 0s;

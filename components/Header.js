@@ -13,6 +13,9 @@ const Header = () => (
       <BurgerMenu />
     </div>
     <style jsx>{`
+      .header {
+        z-index: 9999;
+      }
       @media screen and (max-width: 649px) {
         .link {
           display: none;
