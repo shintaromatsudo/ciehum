@@ -6,12 +6,14 @@ const ScrollDown = () => (
         position: absolute;
         left: 20px;
         bottom: 0;
-        width: 50px;
-        height: 20px;
+        width: 150px;
+        height: 50px;
         border-left: 2px solid white;
       }
       p {
-        font-size: 10px;
+        font-size: 20px;
+        padding: 10px;
+        margin-top: 0;
         color: white;
       }
     `}</style>

@@ -2,10 +2,10 @@ import React from 'react'
 import Title from '../components/Title'
 
 const Shopping = () => (
-      <React.Fragment>
-        <Title title="shopping" />
-        <p>¤•iˆê——</p>
-      </React.Fragment>
-    )
+  <React.Fragment>
+    <Title title="shopping" />
+    <p>å•†å“ä¸€è¦§</p>
+  </React.Fragment>
+)
 
 export default Shopping

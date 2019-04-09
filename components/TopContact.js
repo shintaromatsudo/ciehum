@@ -1,20 +1,38 @@
 const TopContact = () => (
   <div id="topContact">
-    <h1>���₢���킹</h1>
-    <p>���C�y�ɂ��₢���킹���������B<br>�S��肨�҂����Ă���܂��B</p>
+    <h1>お問い合わせ</h1>
+    <p>お気軽にお問い合わせください。心よりお待ちしております。</p>
     <form>
-      <label><input placeholder="Name" /></label>
-      <label><input placeholder="Title" /></label>
-      <label><input placeholder="Message" /></label>
+      <label>
+        <input placeholder="Name" />
+      </label>
+      <label>
+        <input placeholder="Title" />
+      </label>
+      <label>
+        <input placeholder="Message" />
+      </label>
       <button type="submit">submit</button>
     </form>
     <p>
-      <a href="mailto:misara2332@gmail.com">���[��</a>
+      <a href="mailto:misara2332@gmail.com">メール</a>
     </p>
     <div className="line">line</div>
-    <div class="line-it-button" data-lang="ja" data-type="friend" data-lineid="@lineteamjp" style="display: none;"></div>
-    <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
-    <p className="facebook"><a href="https://www.facebook.com/ciehumhahajimafacebook">facebook</a></p>
+    {/* <div
+      class="line-it-button"
+      data-lang="ja"
+      data-type="friend"
+      data-lineid="@lineteamjp"
+      style="display: none;"
+    /> */}
+    <script
+      src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js"
+      async="async"
+      defer="defer"
+    />
+    <p className="facebook">
+      <a href="https://www.facebook.com/ciehumhahajima">facebook</a>
+    </p>
     <style jsx>{`
       #topContact {
         width: 100vw;
@@ -38,8 +56,8 @@ const TopContact = () => (
       }
       .facebook {
         width: 30px;
-        background-color: #3B5998;
-        border: 2px solid #3B5998;
+        background-color: #3b5998;
+        border: 2px solid #3b5998;
         border-radius: 0;
         color: #fff;
         padding: 4px 32px;
@@ -48,7 +66,7 @@ const TopContact = () => (
       }
       .facebook:hover {
         background-color: #fff;
-        color: #3B5998;
+        color: #3b5998;
       }
     `}</style>
   </div>

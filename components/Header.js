@@ -3,7 +3,7 @@ import BurgerMenu from './BurgerMenu'
 
 const Header = () => (
   <div className="header">
-    <h1>Ciehum</h1>
+    <h1>ciehum</h1>
     <BurgerMenu />
     <style jsx>{`
       .header {

@@ -11,10 +11,11 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>Ciehum</title>
+          <title>ciehum</title>
         </Head>
         <ReactFullpage
           navigation
+          lazyLoading
           render={comp => (
             <ReactFullpage.Wrapper>
               <div className="section">
