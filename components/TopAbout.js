@@ -1,5 +1,6 @@
 const TopAbout = () => (
   <div id="topAbout">
+    <h1>About</h1>
     <style jsx>{`
       #topAbout {
         width: 100vw;

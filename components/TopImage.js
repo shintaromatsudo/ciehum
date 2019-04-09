@@ -1,5 +1,8 @@
+import ScrollDown from './ScrollDown'
+
 const TopImage = () => (
   <div id="topImage">
+    <ScrollDown />
     <style jsx>{`
       #topImage {
         width: 100vw;
