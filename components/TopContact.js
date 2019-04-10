@@ -47,6 +47,7 @@ const TopContact = () => (
         border-radius: 0;
         color: #fff;
         padding: 4px 32px;
+        text-align: center;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
       }
@@ -61,6 +62,7 @@ const TopContact = () => (
         border-radius: 0;
         color: #fff;
         padding: 4px 32px;
+        text-align: center;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
       }

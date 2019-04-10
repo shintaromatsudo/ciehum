@@ -39,13 +39,13 @@ const TopAbout = () => (
       h2 {
         margin: 0;
         padding: 10px;
-        color: white;
+        color: #f5ecf4;
         text-align: center;
       }
       p {
-        margin: 0;
-        padding: 10px;
-        color: white;
+        margin: 0, 10px;
+        padding: 0, 10px;
+        color: #f5ecf4;
       }
     `}</style>
   </div>
