@@ -1,3 +1,5 @@
+import Footer from '../components/Footer'
+
 const TopContact = () => (
   <div id="topContact">
     <h2>お問い合わせ</h2>
@@ -42,6 +44,7 @@ const TopContact = () => (
         <a href="https://www.facebook.com/ciehumhahajima">facebook</a>
       </p>
     </div>
+    <Footer />
     <style jsx>{`
       #topContact {
         width: 100vw;
@@ -50,17 +53,18 @@ const TopContact = () => (
         background-color: #00afcc;
       }
       h2 {
-        margin: 0;
-        color: #eaedf7;
+        color: #9b72b0;
       }
       p {
-        color: #eaedf7;
+        color: #9b72b0;
       }
       input {
         font-family: Lato, Noto Sans JP, 游ゴシック Medium, 游ゴシック体,
           Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN,
           Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック, MSPGothic,
           sans-serif;
+        background-color: #82cddd;
+        border: solid 2px #9b72b0;
         width: 300px;
         height: 20px;
         margin: 10px;
@@ -72,17 +76,38 @@ const TopContact = () => (
           Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN,
           Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック, MSPGothic,
           sans-serif;
+        background-color: #82cddd;
+        border: solid 2px #9b72b0;
         width: 300px;
         height: 100px;
         margin: 10px;
         padding: 10px;
         border-radius: 5px;
       }
+      /* Google Chrome, Safari, Opera 15+, Android, iOS */
+      ::-webkit-input-placeholder {
+        color: #9b72b0;
+      }
+      /* Firefox 18- */
+      :-moz-placeholder {
+        color: #9b72b0;
+        opacity: 1;
+      }
+      /* Firefox 19+ */
+      ::-moz-placeholder {
+        color: #9b72b0;
+        opacity: 1;
+      }
+      /* IE 10+ */
+      :-ms-input-placeholder {
+        color: #9b72b0;
+      }
       button {
-        width: 100px;
+        width: 320px;
         height: 40px;
+        margin: 10px;
+        padding: 10px;
         display: inline-block;
-        padding: 0.3em 1em;
         text-decoration: none;
         color: #9b72b0;
         border: solid 2px #9b72b0;
@@ -132,9 +157,6 @@ const TopContact = () => (
         color: white;
         text-decoration: none;
       }
-      // .facebook a :hover {
-      //   color: #3b5998;
-      // }
     `}</style>
   </div>
 )

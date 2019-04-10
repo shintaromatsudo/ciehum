@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 const Title = props => (
   <Head>
-    <title>{props.title} | Ciehum</title>
+    <title>{props.title} | ciehum</title>
   </Head>
 )
 

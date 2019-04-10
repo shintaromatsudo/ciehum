@@ -44,10 +44,7 @@ const TopAbout = () => (
         text-align: center;
       }
       h2 {
-        margin: 0;
-        padding: 10px;
         color: #eaedf7;
-        text-align: center;
       }
       p {
         font-size: 10px;

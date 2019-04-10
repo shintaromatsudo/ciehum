@@ -32,6 +32,11 @@ class MyDocument extends Document {
               margin: 0;
               animation:fadeIn 3s;
             }
+            h2 {
+              margin: 0;
+              padding: 10px;
+              text-align: center;
+            }
             @keyframes fadeIn {
               0% { 
                 opacity: 0;

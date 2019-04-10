@@ -9,6 +9,9 @@ const Footer = () => (
         text-align: center;
       }
       .footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
         background-color: #a1d8e6;
         z-index: 9999;
       }
