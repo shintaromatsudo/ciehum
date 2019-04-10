@@ -2,7 +2,7 @@ import ScrollDown from './ScrollDown'
 
 const TopImage = () => (
   <div id="topImage">
-    <img className="topImg" src="../static/Top.jpg" alt="ciehum" />
+    <img className="topImg" src="../static/img/Top.jpg" alt="ciehum" />
     <ScrollDown />
     <style jsx>{`
       #topImage {

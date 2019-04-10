@@ -1,7 +1,7 @@
 const TopInsta = () => (
   <div id="topInsta">
     {/* InstaWidget */}
-    <a
+    {/* <a
       href="https://instawidget.net/v/user/ciehum"
       id="link-2dff7e987baca5b745a0ca13df4f413dad6ac81ae3de49b9c4818d69f03748a0"
     >
@@ -14,7 +14,7 @@ const TopInsta = () => (
         height: 100vh;
         background-color: #a1d8e6;
       }
-    `}</style>
+    `}</style> */}
   </div>
 )
 

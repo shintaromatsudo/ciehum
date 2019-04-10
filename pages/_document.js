@@ -20,13 +20,7 @@ class MyDocument extends Document {
           <link
             rel="shortcut icon"
             type="image/x-icon"
-            href="../static/favicon.ico"
-          />
-          <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-            crossOrigin="anonymous"
+            href="../static/img/favicon.ico"
           />
           <link
             href="https://fonts.googleapis.com/css?family=Lato:300|Noto+Sans+JP:300"
@@ -36,7 +30,6 @@ class MyDocument extends Document {
             body {
               font-family: Lato, Noto Sans JP, 游ゴシック Medium, 游ゴシック体, Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN, Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック, MSPGothic, sans-serif;              
               margin: 0;
-              background-color: white;
               animation:fadeIn 3s;
             }
             @keyframes fadeIn {

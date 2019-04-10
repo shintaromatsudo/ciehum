@@ -8,13 +8,13 @@ const ScrollDown = () => (
         bottom: 0;
         width: 150px;
         height: 50px;
-        border-left: 2px solid white;
+        border-left: 3px solid #eaedf7;
       }
       p {
         font-size: 20px;
         padding: 10px;
         margin-top: 0;
-        color: white;
+        color: #eaedf7;
       }
     `}</style>
   </div>
