@@ -1,11 +1,11 @@
 import React from 'react'
 import Title from '../components/Title'
 
-const Shopping = () => (
+const Works = () => (
   <React.Fragment>
-    <Title title="shopping" />
+    <Title title="works" />
     <p>商品一覧</p>
   </React.Fragment>
 )
 
-export default Shopping
+export default Works
