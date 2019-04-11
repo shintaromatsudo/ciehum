@@ -31,28 +31,28 @@ const style = {
 const Home = () => (
   <React.Fragment>
     <Title title="ハンドメイドアクセサリーのお店" />
-    <InitialProgress />
+    {/* <InitialProgress /> */}
     <div id="main">
-    <ReactFullpage
-      navigation
-      // menu={Menu}
-      render={comp => (
-        <ReactFullpage.Wrapper>
-          <div className="section">
-            <TopImage />
-          </div>
-          <div className="section">
-            <TopAbout />
-          </div>
-          <div className="section">
-            <TopInsta />
-          </div>
-          <div className="section">
-            <TopContact />
-          </div>
-        </ReactFullpage.Wrapper>
-      )}
-    />
+      <ReactFullpage
+        navigation
+        // menu={Menu}
+        render={comp => (
+          <ReactFullpage.Wrapper>
+            <div className="section">
+              <TopImage />
+            </div>
+            <div className="section">
+              <TopAbout />
+            </div>
+            <div className="section">
+              <TopInsta />
+            </div>
+            <div className="section">
+              <TopContact />
+            </div>
+          </ReactFullpage.Wrapper>
+        )}
+      />
     </div>
     <style global jsx>{`
       #fp-nav.fp-right {
@@ -63,10 +63,10 @@ const Home = () => (
         background-color: #eaedf7 !important;
       }
       #main {
-        animation:fadeIn 3s;
+        animation: fadeIn 3s;
       }
       @keyframes fadeIn {
-        0% { 
+        0% {
           opacity: 0;
         }
         100% {
