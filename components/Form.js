@@ -14,22 +14,22 @@ class Form extends React.Component {
   template(value) {
     console.log(value)
     switch (value) {
-      case 1:
+      case '送料について':
         this.setState = { title: '送料について', message: 'こんにちは' }
         break
-      case 2:
+      case '日数について':
         this.setState = { title: '日数について', message: 'こんにちは' }
         break
-      case 3:
+      case 'オーダーメイドについて':
         this.setState = {
           title: 'オーダーメイドについて',
           message: 'こんにちは'
         }
         break
-      case 4:
+      case '返金・返品について':
         this.setState = { title: '返金・返品について', message: 'こんにちは' }
         break
-      case 5:
+      case 'その他の問い合わせ':
         this.setState = { title: 'その他の問い合わせ', message: 'こんにちは' }
         break
     }
@@ -68,12 +68,12 @@ class Form extends React.Component {
           </div>
           <div>
             <select name="template" onChange={value => this.template(value)}>
-              <option value="">テンプレートを使用する</option>
-              <option value="1">送料について</option>
-              <option value="2">日数について</option>
-              <option value="3">オーダーメイドについて</option>
-              <option value="4">返金・返品について</option>
-              <option value="5">その他の問い合わせ</option>
+              <option value="テンプレートを使用する">テンプレートを使用する</option>
+              <option value="送料について">送料について</option>
+              <option value="日数について">日数について</option>
+              <option value="オーダーメイドについて">オーダーメイドについて</option>
+              <option value="返金・返品について">返金・返品について</option>
+              <option value="その他の問い合わせ">その他の問い合わせ</option>
             </select>
           </div>
           <div className="form">
@@ -122,7 +122,7 @@ class Form extends React.Component {
               MSPGothic, sans-serif;
             background-color: #82cddd;
             border: solid 2px #9b72b0;
-            width: 300px;
+            width: 320px;
             height: 20px;
             margin: 10px;
             padding: 10px;

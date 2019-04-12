@@ -3,6 +3,7 @@ import Title from '../components/Title'
 
 const Complete = () => {
   const close = () => {
+    console.log("close")
     window.close()
   }
 

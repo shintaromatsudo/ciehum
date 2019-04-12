@@ -9,7 +9,16 @@ class MyDocument extends Document {
   render() {
     return (
       <html>
-        <head>
+        <Head>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138152142-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138152142-1');
+</script>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
@@ -30,23 +39,14 @@ class MyDocument extends Document {
             body {
               font-family: Lato, Noto Sans JP, 游ゴシック Medium, 游ゴシック体, Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN, Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック, MSPGothic, sans-serif;              
               margin: 0;
-              animation:fadeIn 3s;
             }
             h2 {
               margin: 0;
               padding: 10px;
               text-align: center;
             }
-            @keyframes fadeIn {
-              0% { 
-                opacity: 0;
-              }
-              100% {
-                opacity: 1;
-              }
-            }
           `}</style>
-        </head>
+        </Head>
         <body>
           <Main />
           <NextScript />

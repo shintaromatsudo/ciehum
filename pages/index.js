@@ -7,6 +7,7 @@ import TopImage from '../components/TopImage'
 import TopAbout from '../components/TopAbout'
 import TopInsta from '../components/TopInsta'
 import TopContact from '../components/TopContact'
+import PageTopButton from '../components/PageTopButton'
 
 // const Menu = () => (
 //   <ul id="myMenu">
@@ -24,25 +25,50 @@ import TopContact from '../components/TopContact'
 //     </li>
 //   </ul>
 // )
-const style = {
-  backgroundColor: '#fff !important'
-}
 
-const Home = () => (
+class Home extends React.Component {
+// const Home = () => (
+  componentDidMount() {
+    window.addEventListener('scroll', event => this.handleScroll(), true)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', event => this.handleScroll(), false)
+  }
+
+  handleScroll() {
+    const ScrollY = Math.max(
+      document.documentElement.scrollTop,
+      document.body.scrollTop
+    )
+    const scrollAnimationElm = document.querySelectorAll('.scrollIn')
+    for (var i = 0; i < scrollAnimationElm.length; i++) {
+      var triggerMargin = 200
+      if (
+        ScrollY >
+        scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin
+      ) {
+        scrollAnimationElm[i].classList.add('show')
+      }
+    }
+  }
+
+  render() {
+    return (
   <React.Fragment>
     <Title title="ハンドメイドアクセサリーのお店" />
     {/* <InitialProgress /> */}
     <div id="main">
-      <ReactFullpage
+      {/* <ReactFullpage
         navigation
-        // menu={Menu}
+        menu={Menu}
         render={comp => (
           <ReactFullpage.Wrapper>
             <div className="section">
               <TopImage />
             </div>
             <div className="section">
-              <TopAbout />
+              <TopConcept />
             </div>
             <div className="section">
               <TopInsta />
@@ -52,7 +78,12 @@ const Home = () => (
             </div>
           </ReactFullpage.Wrapper>
         )}
-      />
+      /> */}
+      <TopImage />
+      <TopConcept />
+      <Link><a href="/contact">CONTACT</a></Link>
+      <TopInsta />
+      <PageTopButton />
     </div>
     <style global jsx>{`
       #fp-nav.fp-right {
