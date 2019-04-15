@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../components/Title'
+import Form from '../components/Form'
 
 const Contact = () => (
   <div id="contact">
@@ -14,11 +15,11 @@ const Contact = () => (
         <a href="https://www.facebook.com/ciehumhahajima">facebook</a>
       </p>
     </div>
-    <Footer />
     <style jsx>{`
       #contact {
         max-width: 650px;
         height: 100vh;
+        margin: auto;
         text-align: center;
         background-color: #00afcc;
       }

@@ -22,7 +22,7 @@ export default class MyApp extends App {
       <Container>
         {/* <Header /> */}
         <Component {...pageProps} />
-        {/* <Footer /> */}
+        <Footer />
       </Container>
     )
   }
