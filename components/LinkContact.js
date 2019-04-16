@@ -16,12 +16,24 @@ const LinkContact = () => (
       .linkContactDiv {
         width: 300px;
         height: 40px;
+        color: white;
+        background-color: #a1d8e6;
+        display: table;
+        text-align: center;
+        text-decoration: none;
         border: 2px solid white;
         border-radius: 2px;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+      .linkContactDiv :hover {
+        color: #a1d8e6;
+        background-color: white;
+        border: 2px solid #a1d8e6;
       }
       .linkContactA {
-        color: white;
-        text-decoration: none;
+        display: table-cell;
+        vertical-align: middle;
       }
     `}</style>
   </div>

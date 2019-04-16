@@ -23,7 +23,7 @@ const TopImage = () => (
       @media screen and (max-width: 650px) {
         .topImg {
           width: 70%;
-          padding: 150px;
+          padding: 60px;
         }
       }
     `}</style>

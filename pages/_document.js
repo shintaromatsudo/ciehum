@@ -26,6 +26,12 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Lato:300|Noto+Sans+JP:300"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossOrigin="anonymous"
+          />
           <style>{`
             body {
               font-family: Lato, Noto Sans JP, 游ゴシック Medium, 游ゴシック体, Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN, Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック, MSPGothic, sans-serif;              

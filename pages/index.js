@@ -30,17 +30,21 @@ import PageTopButton from '../components/PageTopButton'
 // )
 
 class Home extends React.Component {
-  // const Home = () => (
+  constructor(props) {
+    super(props)
+    //ここで定義しておく
+    this.fade = this.fade.bind(this)
+    this.handleScroll = this.fade.bind(this)
+  }
+
   componentDidMount() {
-    window.addEventListener('scroll', event => this.handleScroll(), true)
-    window.addEventListener('scroll', event => this.fade(), true)
-    console.log('did')
+    window.addEventListener('scroll', this.fade)
+    window.addEventListener('scroll', this.handleScroll)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', event => this.handleScroll(), false)
-    window.removeEventListener('scroll', this.fade(), false)
-    console.log(window.removeEventListener('scroll', this.fade(), false))
+    window.removeEventListener('scroll', this.fade)
+    window.removeEventListener('scroll', this.handleScroll)
   }
 
   fade = () => {
@@ -49,7 +53,6 @@ class Home extends React.Component {
       document.body.scrollTop
     )
     const element = document.getElementById('scrollToTop')
-    console.log(element)
     if (ScrollY < 50) {
       element.classList.remove('fadeIn')
       element.classList.add('fadeOut')
@@ -59,7 +62,7 @@ class Home extends React.Component {
     }
   }
 
-  handleScroll() {
+  handleScroll = () => {
     const ScrollY = Math.max(
       document.documentElement.scrollTop,
       document.body.scrollTop

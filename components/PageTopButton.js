@@ -43,10 +43,10 @@ class PageTopButton extends React.Component {
         <style jsx>{`
           #scrollToTop {
             position: fixed;
-            right: 40px;
+            right: 30px;
             bottom: 30px;
-            width: 50px;
-            height: 50px;
+            width: 42px;
+            height: 42px;
             font-size: 2em;
             color: #a1d8e6;
             background-color: #00afcc;
