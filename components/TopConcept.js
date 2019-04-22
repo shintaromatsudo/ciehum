@@ -36,6 +36,10 @@ const TopConcept = () => (
         width: 100vw;
         height: 100vh;
         background-color: #00afcc;
+        // background-image: url('../static/img/DSC05683.JPG');
+        // background-attachment: fixed;
+        // background-size: cover;
+        // background-position: center;
       }
       .concept {
         margin: 40px;

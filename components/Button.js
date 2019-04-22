@@ -18,14 +18,17 @@ const Button = props => (
         display: table-cell;
         vertical-align: middle;
         text-decoration: none;
-        color: #9b72b0;
-        border: solid 2px #9b72b0;
+        background-color: #7f1184;
+        color: #eaedf7;
+        font-size: 20px;
+        border: solid 2px #eaedf7;
         border-radius: 5px;
         transition: 0.4s;
       }
       .linkButton :hover {
-        background: #9b72b0;
-        color: white;
+        background-color: #9b72b0;
+        color: #7f1184;
+        border: solid 2px #7f1184;
         cursor: pointer;
       }
     `}</style>
