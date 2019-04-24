@@ -28,6 +28,34 @@ app
     server.post('/api/contact', (req, res) => {
       const { name, email, title, message } = req.query
       console.log(req.query)
+      // SMTPサーバーの設定
+      const transporter = nodemailer.createTransport(
+        smtpTransport({
+          service: 'gmail',
+          host: 'smtp.gmail.com',
+          port: 587,
+          tls: true,
+          // webメールのログインアカウント
+          auth: {
+            user: 'shintaro011224',
+            pass: 'shinmatsu24'
+          }
+        })
+      )
+      transporter.sendMail(
+        {
+          from: 'shintaro011224@gmail.com',
+          // お問い合わせ受け取り先のメールアドレス
+          to: 'shintaro011224@gmail.com',
+          subject: title,
+          text: message + '/' + name + '/' + email,
+          html: message + '<br>' + name + '<br>' + email
+        },
+        function(err, response) {
+          if (err) return next(err)
+          console.log(response)
+        }
+      )
     })
 
     server.listen(port, err => {
