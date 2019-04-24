@@ -3,7 +3,7 @@ import Title from '../components/Title'
 
 const Complete = () => {
   const close = () => {
-    console.log("close")
+    console.log('close')
     window.close()
   }
 
@@ -14,12 +14,7 @@ const Complete = () => {
       <p>
         入力いただいたメールアドレスに自動的に送信完了メールを送信させていただきました。
       </p>
-      <p>お問い合わせID</p>
-      <p>お問い合わせ内容</p>
-      <p>Title</p>
-      <p>Name</p>
-      <p>EmailAddress</p>
-      <p>Messasge</p>
+      <p>お問い合わせ番号</p>
       <button onClick={close}>このページを閉じる</button>
     </React.Fragment>
   )

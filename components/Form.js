@@ -1,5 +1,4 @@
-// import 'isomorphic-fetch'
-import axios from 'axios'
+import Confirm from '../components/Confirm'
 
 class Form extends React.Component {
   constructor(props) {
@@ -52,16 +51,10 @@ class Form extends React.Component {
     this.setState({ message: e.target.value })
   }
 
-  handleSubmit(e) {
+  handleConfirm(e) {
     e.preventDefault()
-    const data = this.state
-    console.log(data)
-    axios({
-      method: 'POST',
-      url: '/api/contact',
-      params: data
-    })
-    // Router.pushRoute(`/`)
+    const confirm = document.getElementById('confirm')
+    confirm.classList.remove('confirm')
   }
 
   render() {
@@ -71,7 +64,7 @@ class Form extends React.Component {
         <p>お気軽にお問い合わせください。心よりお待ちしております。</p>
         <form
           onSubmit={e => {
-            this.handleSubmit(e)
+            this.handleConfirm(e)
           }}
         >
           <div className="form">
@@ -138,6 +131,9 @@ class Form extends React.Component {
           </div>
         </form>
         <p>よくあるお問い合わせ</p>
+        <div id="confirm" className="confirm">
+          <Confirm state={this.state} />
+        </div>
         <style jsx>{`
           #form {
             text-align: center;
@@ -222,6 +218,9 @@ class Form extends React.Component {
             background: #9b72b0;
             color: white;
             cursor: pointer;
+          }
+          .confirm {
+            display: none;
           }
         `}</style>
       </div>
