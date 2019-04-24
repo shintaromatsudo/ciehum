@@ -6,7 +6,7 @@ const TopStore = () => (
       <h2>ONLINE STORE</h2>
     </div>
     <iframe
-      frameborder="0"
+      frameBorder="0"
       height="300"
       width="220"
       src="http://ciehum.thebase.in/items/2609521/widget"

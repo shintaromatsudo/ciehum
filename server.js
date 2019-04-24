@@ -1,7 +1,7 @@
 const express = require('express')
-const cookieParser = require('cookie-parser')
+// const cookieParser = require('cookie-parser')
 const next = require('next')
-const routes = require('./routes')
+// const routes = require('./routes')
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
@@ -9,8 +9,8 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 // const handler = routes.getRequestHandler(app)
 
-const nodemailer = require("nodemailer");
-const smtpTransport = require('nodemailer-smtp-transport');
+const nodemailer = require('nodemailer')
+const smtpTransport = require('nodemailer-smtp-transport')
 
 app
   .prepare()
@@ -18,17 +18,16 @@ app
     const server = express()
     // server.use(handler)
 
-    server.use(bodyParser.json())
-    server.use(cookieParser())
+    // server.use(bodyParser.json())
+    // server.use(cookieParser())
 
     server.get('*', (req, res) => {
       return handle(req, res)
     })
-    
+
     server.post('/api/contact', (req, res) => {
-      const { email, name } = req.body
-      console.log(req.body)
-      res.send('success')
+      const { name, email, title, message } = req.query
+      console.log(req.query)
     })
 
     server.listen(port, err => {

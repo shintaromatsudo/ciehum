@@ -1,5 +1,5 @@
-import 'isomorphic-fetch'
-import Footer from '../components/Footer'
+// import 'isomorphic-fetch'
+import axios from 'axios'
 
 class Form extends React.Component {
   constructor(props) {
@@ -8,60 +8,82 @@ class Form extends React.Component {
       name: '',
       email: '',
       title: '',
-      message: '',
-      template: ''
+      message: ''
     }
   }
 
-  template(value) {
-    console.log(value)
+  template() {
+    const value = document.getElementById('template').value
     switch (value) {
       case '送料について':
-        this.setState = { title: '送料について', message: 'こんにちは' }
+        this.setState({ title: '送料について', message: 'こんにちは' })
         break
       case '日数について':
-        this.setState = { title: '日数について', message: 'こんにちは' }
+        this.setState({ title: '日数について', message: 'こんにちは' })
         break
       case 'オーダーメイドについて':
-        this.setState = {
+        this.setState({
           title: 'オーダーメイドについて',
           message: 'こんにちは'
-        }
+        })
         break
       case '返金・返品について':
-        this.setState = { title: '返金・返品について', message: 'こんにちは' }
+        this.setState({ title: '返金・返品について', message: 'こんにちは' })
         break
       case 'その他の問い合わせ':
-        this.setState = { title: 'その他の問い合わせ', message: 'こんにちは' }
+        this.setState({ title: 'その他の問い合わせ', message: 'こんにちは' })
         break
     }
+  }
+
+  handleChangeName(e) {
+    this.setState({ name: e.target.value })
+  }
+
+  handleChangeEmail(e) {
+    this.setState({ email: e.target.value })
+  }
+
+  handleChangeTitle(e) {
+    this.setState({ title: e.target.value })
+  }
+
+  handleChangeMessage(e) {
+    this.setState({ message: e.target.value })
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log(e)
-    const data = new FormData(e.target)
-    fetch('/api/contact', {
+    const data = this.state
+    console.log(data)
+    axios({
       method: 'POST',
-      body: data,
+      url: '/api/contact',
+      params: data
     })
-    Router.pushRoute(`/`)
+    // Router.pushRoute(`/`)
   }
 
   render() {
     const { name, email, title, message } = this.state
-    console.log(this.state)
     return (
       <div id="form">
         <p>お気軽にお問い合わせください。心よりお待ちしております。</p>
         <form
-          onSubmit={() => {
-            this.handleSubmit()
+          onSubmit={e => {
+            this.handleSubmit(e)
           }}
         >
           <div className="form">
             <label>
-              <input type="text" name="name" placeholder="Name" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+                onChange={e => this.handleChangeName(e)}
+                value={name}
+              />
             </label>
           </div>
           <div className="form">
@@ -71,27 +93,44 @@ class Form extends React.Component {
                 name="email"
                 placeholder="MailAddress"
                 required
+                onChange={e => this.handleChangeEmail(e)}
+                value={email}
               />
             </label>
           </div>
           <div>
-            <select name="template" onChange={value => this.template(value)}>
-              <option value="テンプレートを使用する">テンプレートを使用する</option>
+            <select id="template" onChange={() => this.template()}>
+              <option value="テンプレートを使用する">
+                テンプレートを使用する
+              </option>
               <option value="送料について">送料について</option>
               <option value="日数について">日数について</option>
-              <option value="オーダーメイドについて">オーダーメイドについて</option>
+              <option value="オーダーメイドについて">
+                オーダーメイドについて
+              </option>
               <option value="返金・返品について">返金・返品について</option>
               <option value="その他の問い合わせ">その他の問い合わせ</option>
             </select>
           </div>
           <div className="form">
             <label>
-              <input type="text" placeholder="Title" />
+              <input
+                type="text"
+                name="title"
+                placeholder="Title"
+                onChange={e => this.handleChangeTitle(e)}
+                value={title}
+              />
             </label>
           </div>
           <div className="form">
             <label>
-              <textarea placeholder="Message" />
+              <textarea
+                name="message"
+                placeholder="Message"
+                onChange={e => this.handleChangeMessage(e)}
+                value={message}
+              />
             </label>
           </div>
           <div>
