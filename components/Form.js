@@ -1,3 +1,4 @@
+import 'isomorphic-fetch'
 import Footer from '../components/Footer'
 
 class Form extends React.Component {
@@ -7,7 +8,8 @@ class Form extends React.Component {
       name: '',
       email: '',
       title: '',
-      message: ''
+      message: '',
+      template: ''
     }
   }
 
@@ -37,23 +39,29 @@ class Form extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    // this.props.dispatch(postData(this.props.form))
+    console.log(e)
+    const data = new FormData(e.target)
+    fetch('/api/contact', {
+      method: 'POST',
+      body: data,
+    })
     Router.pushRoute(`/`)
   }
 
   render() {
     const { name, email, title, message } = this.state
+    console.log(this.state)
     return (
       <div id="form">
         <p>お気軽にお問い合わせください。心よりお待ちしております。</p>
         <form
-          onSubmit={value => {
-            this.handleSubmit(value)
+          onSubmit={() => {
+            this.handleSubmit()
           }}
         >
           <div className="form">
             <label>
-              <input type="text" placeholder="Name" required />
+              <input type="text" name="name" placeholder="Name" required />
             </label>
           </div>
           <div className="form">
