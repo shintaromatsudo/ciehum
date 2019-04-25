@@ -13,7 +13,8 @@ const Confirm = props => {
     //   url: '/api/contact',
     //   params: data
     // })
-    Router.push(`/complete`, `target: blank`)
+    window.open('/complete');
+    Router.push(`/`)
   }
   return (
     <div className="c">

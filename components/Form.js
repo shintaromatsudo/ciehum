@@ -1,4 +1,4 @@
-import Confirm from '../components/Confirm'
+import Confirm from './Confirm'
 
 class Form extends React.Component {
   constructor(props) {

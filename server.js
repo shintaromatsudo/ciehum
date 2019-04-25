@@ -44,7 +44,7 @@ app
       )
       transporter.sendMail(
         {
-          from: 'shintaro011224@gmail.com',
+          from: 'お問い合わせ<shintaro011224@gmail.com>',
           // お問い合わせ受け取り先のメールアドレス
           to: 'shintaro011224@gmail.com',
           subject: title,
@@ -65,5 +65,4 @@ app
   })
   .catch(ex => {
     console.error(ex.stack)
-    process.exit(1)
   })
