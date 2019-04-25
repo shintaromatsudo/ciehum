@@ -1,4 +1,5 @@
 import Confirm from './Confirm'
+import ContactButton from './ContactButton'
 
 class Form extends React.Component {
   constructor(props) {
@@ -61,12 +62,13 @@ class Form extends React.Component {
     const { name, email, title, message } = this.state
     return (
       <div id="form">
-        <p>お気軽にお問い合わせください。心よりお待ちしております。</p>
         <form
+          className="form"
           onSubmit={e => {
             this.handleConfirm(e)
           }}
         >
+          <p>お気軽にお問い合わせください。心よりお待ちしております。</p>
           <div className="form">
             <label>
               <input
@@ -127,17 +129,19 @@ class Form extends React.Component {
             </label>
           </div>
           <div>
-            <button type="submit">送信内容を確認する</button>
+            <ContactButton type="submit" value="送信内容を確認する" />
           </div>
         </form>
-        <p>よくあるお問い合わせ</p>
+        {/* <p>よくあるお問い合わせ</p> */}
         <div id="confirm" className="confirm">
           <Confirm state={this.state} />
         </div>
         <style jsx>{`
           #form {
-            text-align: center;
             background-color: #00afcc;
+          }
+          .form {
+            text-align: center;
           }
           h2 {
             color: #9b72b0;
@@ -201,23 +205,6 @@ class Form extends React.Component {
           /* IE 10+ */
           :-ms-input-placeholder {
             color: #9b72b0;
-          }
-          button {
-            width: 320px;
-            height: 40px;
-            margin: 10px;
-            padding: 10px;
-            display: inline-block;
-            text-decoration: none;
-            color: #9b72b0;
-            border: solid 2px #9b72b0;
-            border-radius: 5px;
-            transition: 0.4s;
-          }
-          button :hover {
-            background: #9b72b0;
-            color: white;
-            cursor: pointer;
           }
           .confirm {
             display: none;

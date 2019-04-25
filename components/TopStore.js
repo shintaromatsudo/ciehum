@@ -1,4 +1,4 @@
-import Button from './Button'
+import MoreButton from './MoreButton'
 
 const TopStore = () => (
   <div id="topStore">
@@ -12,7 +12,7 @@ const TopStore = () => (
       src="http://ciehum.thebase.in/items/2609521/widget"
     />
     <div className="storeLink">
-      <Button href="http://ciehum.thebase.in/" />
+      <MoreButton href="http://ciehum.thebase.in/" />
     </div>
     <style jsx>{`
       #topStore {

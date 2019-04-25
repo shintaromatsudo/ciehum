@@ -7,20 +7,15 @@ const Contact = () => (
     <Title title="contact" />
     <h2>お問い合わせ</h2>
     <Form />
-    <div className="link">
-      <p>
-        <a href="mailto:misara2332@gmail.com">メールする</a>
-      </p>
+    {/* <div className="link">
       <p className="facebook">
         <a href="https://www.facebook.com/ciehumhahajima">facebook</a>
       </p>
-    </div>
+    </div> */}
     <style jsx>{`
       #contact {
-        max-width: 650px;
         height: 100vh;
         margin: auto;
-        text-align: center;
         background-color: #00afcc;
       }
       h2 {

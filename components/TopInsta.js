@@ -1,4 +1,4 @@
-import Button from './Button'
+import MoreButton from './MoreButton'
 
 const TopInsta = () => (
   <div id="topInsta">
@@ -6,7 +6,7 @@ const TopInsta = () => (
       <h2>INSTAGRAM</h2>
     </div>
     <div className="instaLink">
-      <Button href="https://www.instagram.com/ciehum" />
+      <MoreButton href="https://www.instagram.com/ciehum" />
     </div>
     <style jsx>{`
       #topInsta {

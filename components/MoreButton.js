@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = props => (
+const MoreButton = props => (
   <div id="linkButton">
     <a className="linkButton" href={props.href} target="_blank">
       MORE
@@ -35,4 +35,4 @@ const Button = props => (
   </div>
 )
 
-export default Button
+export default MoreButton

@@ -1,5 +1,6 @@
 import Router from 'next/router'
 import axios from 'axios'
+import ContactButton from './ContactButton'
 
 const Confirm = props => {
   const state = props.state
@@ -8,13 +9,18 @@ const Confirm = props => {
     e.preventDefault()
     const data = state
     console.log(data)
-    // axios({
-    //   method: 'POST',
-    //   url: '/api/contact',
-    //   params: data
-    // })
-    window.open('/complete');
+    axios({
+      method: 'POST',
+      url: '/api/contact',
+      params: data
+    })
+    window.open('/complete')
     Router.push(`/`)
+  }
+
+  const onClick = () => {
+    const confirm = document.getElementById('confirm')
+    confirm.classList.add('confirm')
   }
   return (
     <div className="c">
@@ -24,11 +30,16 @@ const Confirm = props => {
           handleSubmit(e)
         }}
       >
-        <p>{name}</p>
-        <p>{email}</p>
-        <p>{title}</p>
-        <p>{message}</p>
-        <button type="submit">送信する</button>
+        <p>お名前：{name}</p>
+        <p>メールアドレス：{email}</p>
+        <p>タイトル：{title}</p>
+        <p>メッセージ：{message}</p>
+        <div>
+          <div onClick={() => onClick()}>
+            <ContactButton type="button" value="修正する" />
+          </div>
+          <ContactButton type="submit" value="送信する" />
+        </div>
       </form>
       <style jsx>{`
         .c {

@@ -1,13 +1,10 @@
 const express = require('express')
-// const cookieParser = require('cookie-parser')
 const next = require('next')
-// const routes = require('./routes')
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
-// const handler = routes.getRequestHandler(app)
 
 const nodemailer = require('nodemailer')
 const smtpTransport = require('nodemailer-smtp-transport')
@@ -16,10 +13,6 @@ app
   .prepare()
   .then(() => {
     const server = express()
-    // server.use(handler)
-
-    // server.use(bodyParser.json())
-    // server.use(cookieParser())
 
     server.get('*', (req, res) => {
       return handle(req, res)
@@ -44,9 +37,22 @@ app
       )
       transporter.sendMail(
         {
-          from: 'お問い合わせ<shintaro011224@gmail.com>',
+          from: 'お問い合わせ <shintaro011224@gmail.com>',
           // お問い合わせ受け取り先のメールアドレス
           to: 'shintaro011224@gmail.com',
+          subject: title,
+          text: message + '/' + name + '/' + email,
+          html: message + '<br>' + name + '<br>' + email
+        },
+        function(err, response) {
+          if (err) return next(err)
+          console.log(response)
+        }
+      )
+      transporter.sendMail(
+        {
+          from: 'ciehum <shintaro011224@gmail.com>',
+          to: email,
           subject: title,
           text: message + '/' + name + '/' + email,
           html: message + '<br>' + name + '<br>' + email
